@@ -6,7 +6,8 @@ import time
 # defining the function for setting the wallpaper
 def set_wallpaper(url):
     response = requests.get(url)
-    path = '' #The path that you want the image to be saved on your pc
+    path = '' #The path that you want the image to be saved on your pc --
+    # ----sample----> 'C:\\Users\\user\\desktop\\wallpapers\\wallpaper.jpg'
     with open(path, 'wb') as f:
         f.write(response.content)
     SPI_SETDESKWALLPAPER = 20
